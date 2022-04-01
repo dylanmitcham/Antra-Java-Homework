@@ -1,0 +1,70 @@
+PRIMITIVE DATA TYPES
+byte, short, int , long, float, double , char, boolean
+A byte represents 8 bits
+An int represents an integer value between -2^31 and 2^31-1
+short is half the size of int but double the size of byte
+long can represent a value between -2^63 and 2^63-1
+float and double represent fractional numbers but double has a larger range and float must end with f i.e. float test = 3.1923f
+boolean can be either true or false
+a char is a 16 bit integer representing a unicode character
+
+FLOW CONTROL
+if , else, switch, case, default, for , do , while, break, continue, return
+if (condition) {
+   // execute code in block
+} elseif (other condition) {
+  // execute this instead
+} else {
+  // do this if the none of conditions were satisfied
+}
+
+while (condition) {
+  // execute as long as the condition is true
+}
+
+do {
+  // execute this while loop at least once even if it isn't true 
+}
+
+break will end the current loop while continue will only skip that round of the loop
+return simply returns a value for a method
+
+MODIFIERS
+public, private, protected , static, final, abstract, synchronized, native, strictfp, transient, volatile
+public access modifier means this class/method/attribute can be accessed by anyone
+private limits access for methods and attributes to the class it was declared in
+protected limits access for attributes and methods to the package and sub classes while default only allows for access from within the same package
+final is a non access modifier that prevents a class from being inherited, and attributes/methods from being overwritten
+an abstract method has no method body and must be filled out by the sub classes while an abstract class has abstract methods 
+the static keyword means that attributes and methods belong to the class not the object
+synchronized keyword means that only one thread can access the synchronized method/object at a time
+volatile is used to add thread safety to attributes 
+transient is used to prevent an object from serializable meaning it can be turned into a stream of bytes
+native is used to indicate that method is implemented in native code using JNI
+strictfp is used to ensure that operations with floats have the same result on every platform because the precision can vary across platforms 
+
+EXCEPTION HANDLING
+try, catch, finally, throw, throws, assert
+try and catch are used to try to execute a block of code and prepare a response for (catch) the exception. Finally is added onto a try catch block to execute something no matter what.
+throw lets you create custom error types i.e. 
+if (age > 18) {
+  throw new ArthitmeticException("The number for the age attribute is not high enough!") // which would print that message to the console if age is larger than 18
+}
+throws can indicate what types of exceptions/errors a method can throw. throws can capture multiple exceptions while throw will only throw the exception once
+assert is used in unit testing to determine if the condition for the test is satisfied. 
+
+CLASS RELATED
+class, package, import, extends, implements, interface
+A class represents a template for an object
+A package contains related classes
+Import is used to load and use a package or API
+Extends is used to inherit a parent class, it can only be done once because Java doesn't support multiple inheritance
+Implements is used to "inherit" or extend an interface. A class can implement multiple interfaces.
+An interface is an abstract class with strictly abstract methods that must be filled out by the classes that implement the interface.
+
+OBJECT RELATED KEYWORDS
+new, instanceof, super, this
+new creates a new object on the heap
+super references the parent class 
+this refers to the current object
+instanceof is used to detect if an object is an instance of a specified type i.e. is this object an object of class "Node"
